@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLORON GAME</title>
+   
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700,900'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="splash"></div>
+    <div class="container">
+
+        <div class="start-game game-full-flex" id="start-game">
+
+            <div class="start-game-top"></div>
+
+            <div class="logo-holder">
+                <p class="logo">
+                    <span>C</span>
+                    <span>o</span>
+                    <span>l</span>
+                    <span>o</span>
+                    <span>r</span>
+                    <span>o</span>
+                    <span>n</span>
+                </p>
+                <a class="play-button" href="#" onclick="game.start()">Play</a>
+                <h4 class="hint">Aiuto: <span>Rosso</span> è sempre il colore di partenza</h4>
+            </div>
+
+            <div class="how-to-play">
+                <div class="section section-1">
+                    <h4>La palla che rimbalza<br>cambia colore</h4>
+                    <div class="content">
+                        <div class="ball-demo" id="ball-demo"></div>
+                    </div>
+                </div>
+                <div class="section section-2">
+                    <h4>Tocca la barra per cambiare i colori<br>(rosso, giallo, viola)</h4>
+                    <div class="content">
+                        <div class="bar bar-1" data-index="0"></div>
+                        <div class="bar bar-2"></div>
+                        <div class="bar bar-3"></div>
+                    </div>
+                </div>
+                <div class="section section-3">
+                    <h4>Abbina sempre<br>i colori della pallina e della barra</h4>
+                    <div class="content">
+                        <div class="ball-demo" id="ball-demo"></div>
+                        <div class="bar bar-1"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="stop-game game-full-flex">
+
+            <div class="score-container">
+
+                <h1>Coloron</h1>
+
+                <div class="final-score"></div>
+                <div class="result"></div>
+
+         
+                <div>
+                    <a class="play-again" href="#" onclick="game.start()">Riprova</a>
+                    <a class="main-menu" href="#" onclick="game.intro()">Menu</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="small-glows"></div>
+
+        <div class="glow">
+            <div class="sun"></div>
+        </div>
+
+        <div class="waves">
+            <div class="top_wave"></div>
+            <div class="wave1"></div>
+            <div class="wave2"></div>
+            <div class="wave3"></div>
+            <div class="wave4"></div>
+        </div>
+
+        <div class="mounts">
+            <div class="mount1"></div>
+            <div class="mount2"></div>
+        </div>
+
+        <div class="clouds"></div>
+
+        <div class="scene">
+            <div class="learn-to-play">Clicca sulle barre per cambiare il colore!</div>
+            <div class="score" id="score"></div>
+            <div class="ball-holder"></div>
+            <div class="sticks" id="sticks"></div>
+        </div>
+
+        <div class="noise"></div>
+
+    </div>
+    <!-- partial -->
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
