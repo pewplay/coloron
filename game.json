@@ -1,0 +1,8 @@
+{
+  "title": "Coloron",
+  "description": "Bounce the ball and match the color of the platform.",
+  "keywords": ["color", "bounce", "arcade", "casual"],
+  "category": "Arcade",
+  "author": "PewPlay",
+  "playMode": "SinglePlayer"
+}
