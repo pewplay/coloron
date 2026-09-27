@@ -1,8 +1,14 @@
 {
+  "$schema": "https://raw.githubusercontent.com/pewplay/pewplay/main/schema/game.schema.json",
   "title": "Coloron",
   "description": "Bounce the ball and match the color of the platform.",
-  "keywords": ["color", "bounce", "arcade", "casual"],
   "category": "Arcade",
+  "tags": [
+    "color",
+    "bounce",
+    "arcade",
+    "casual"
+  ],
   "author": "PewPlay",
   "playMode": "SinglePlayer"
 }
