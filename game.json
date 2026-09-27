@@ -1,8 +1,48 @@
 {
+  "$schema": "https://raw.githubusercontent.com/pewplay/pewplay/main/schema/game.schema.json",
   "title": "Coloron",
-  "description": "Bounce the ball and match the color of the platform.",
-  "keywords": ["color", "bounce", "arcade", "casual"],
+  "description": "Tap the scrolling bars to paint them red, yellow or purple so the bouncing ball always lands on its own color in this free browser game.",
+  "about": "Coloron is a bright, fast color-matching game set in a cheerful seaside scene with waves, mountains and drifting clouds. A ball bounces in place while a row of bars scrolls beneath it, and every time the ball lands, the bar under it must be exactly the same color as the ball.\n\nThe bars start out dark. Tap or click one to paint it red, then keep tapping to cycle it to yellow and purple. The ball changes color on every bounce, so you always have to look ahead and paint the next bar in time. Each clean landing scores a point, and the whole scene speeds up as your score climbs, until one wrong color ends the run with a cheeky verdict on your score.\n\nIt is easy to learn and hard to master, a good fit for quick sessions and for anyone who enjoys reaction games with a splash of color.",
+  "howToPlay": "Press Play and watch the ball bounce over the scrolling bars. Tap or click a bar to color it; every tap cycles it through red, yellow and purple, and red always comes first. The bar under the ball must match the ball's color each time it lands, or the game is over.",
+  "controls": [
+    {
+      "input": "Click / Tap bar",
+      "action": "Cycle the bar's color: red, yellow, purple"
+    },
+    {
+      "input": "Click / Tap buttons",
+      "action": "Play, Retry or return to the Menu"
+    }
+  ],
+  "tips": [
+    "Paint the bars ahead of the ball, not the one it is about to hit, so you are never rushing.",
+    "Red is always the first color, so one tap gives red, two give yellow and three give purple.",
+    "The ball never shows the same color twice in a row, which helps you predict what comes next.",
+    "The game first speeds up after 5 points and keeps accelerating as your score grows, so build a rhythm early."
+  ],
+  "faq": [
+    {
+      "question": "Is Coloron free to play?",
+      "answer": "Yes. It is completely free and runs in your browser with no download or sign-up."
+    },
+    {
+      "question": "Can I play on a phone or tablet?",
+      "answer": "Yes, you tap the bars to change their color. The game is designed for a wide screen, so on a phone it is much easier to play in landscape."
+    },
+    {
+      "question": "Does Coloron get harder over time?",
+      "answer": "Yes. As your score rises the bars scroll and the ball bounces faster, up to nearly twice the starting speed."
+    }
+  ],
   "category": "Arcade",
+  "tags": [
+    "color matching",
+    "reflex",
+    "tapping",
+    "arcade",
+    "bouncing ball"
+  ],
   "author": "PewPlay",
-  "playMode": "SinglePlayer"
+  "playMode": "SinglePlayer",
+  "orientation": "landscape"
 }
