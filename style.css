@@ -474,6 +474,8 @@ body {
   padding: 0;
   overflow: hidden;
   font-family: "Roboto", sans-serif;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {

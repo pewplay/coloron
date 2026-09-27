@@ -105,13 +105,13 @@ class Game {
    */
   showGrade(score) {
     if (score > 30) return "Chuck Norris?";else
-    if (score > 25) return "Tu sei l'uomo";else
-    if (score > 20) return "Eccezionale";else
-    if (score > 15) return "Grande!";else
-    if (score > 13) return "Carino!";else
-    if (score > 10) return "Buon lavoro!";else
-    if (score > 5) return "Veramente?";else
-    return "Povero...";
+    if (score > 25) return "You're the man";else
+    if (score > 20) return "Impressive";else
+    if (score > 15) return "Great!";else
+    if (score > 13) return "Nice!";else
+    if (score > 10) return "Good job!";else
+    if (score > 5) return "Really?";else
+    return "Poor...";
   }
 
   start() {
@@ -571,7 +571,13 @@ $(document).on('click', '.section-2 .bar', function () {
   color.changeColor($(this));
 });
 
+// Only rescale when the size really changes (ignore small height changes,
+// e.g. the mobile browser toolbar showing/hiding, which would end the game)
+var lastSize = { w: $(window).width(), h: $(window).height() };
 $(window).resize(function () {
+  var w = $(window).width(), h = $(window).height();
+  if (w === lastSize.w && Math.abs(h - lastSize.h) < 120) return;
+  lastSize = { w: w, h: h };
   if (!userAgent.match(/iPad/i) && !userAgent.match(/iPhone/i)) {
     game.scaleScreenAndRun();
   }
