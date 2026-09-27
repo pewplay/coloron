@@ -2,6 +2,32 @@
   "$schema": "https://raw.githubusercontent.com/pewplay/pewplay/main/schema/game.schema.json",
   "title": "Coloron",
   "description": "Bounce the ball and match the color of the platform.",
+  "about": "Coloron is a browser game where you watch the color of the bouncing ball and switch the bar to the same color before it lands.\n\nStart a round in your browser and use the controls below to play.",
+  "howToPlay": "Watch the color of the bouncing ball and switch the bar to the same color before it lands.",
+  "controls": [
+    {
+      "input": "Click / tap the bars",
+      "action": "Change the bar color"
+    },
+    {
+      "input": "Play / Retry",
+      "action": "Start another round"
+    }
+  ],
+  "tips": [
+    "Use click / tap the bars to change the bar color.",
+    "Try another round to practice the timing and strategy."
+  ],
+  "faq": [
+    {
+      "question": "How do I play Coloron?",
+      "answer": "Watch the color of the bouncing ball and switch the bar to the same color before it lands."
+    },
+    {
+      "question": "Can I play Coloron in a browser?",
+      "answer": "Yes. Open the game page and play without installing an app."
+    }
+  ],
   "category": "Arcade",
   "tags": [
     "color",
@@ -9,6 +35,9 @@
     "arcade",
     "casual"
   ],
-  "author": "PewPlay",
-  "playMode": "SinglePlayer"
+  "playMode": "SinglePlayer",
+  "orientation": "any",
+  "cover": "cover.png",
+  "draft": true,
+  "author": "PewPlay"
 }
