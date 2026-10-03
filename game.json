@@ -3,11 +3,19 @@
   "title": "Coloron",
   "description": "Tap the scrolling bars to paint them red, yellow or purple so the bouncing ball always lands on its own color in this free browser game.",
   "about": "Coloron is a bright, fast color-matching game set in a cheerful seaside scene with waves, mountains and drifting clouds. A ball bounces in place while a row of bars scrolls beneath it, and every time the ball lands, the bar under it must be exactly the same color as the ball.\n\nThe bars start out dark. Tap or click one to paint it red, then keep tapping to cycle it to yellow and purple. The ball changes color on every bounce, so you always have to look ahead and paint the next bar in time. Each clean landing scores a point, and the whole scene speeds up as your score climbs, until one wrong color ends the run with a cheeky verdict on your score.\n\nIt is easy to learn and hard to master, a good fit for quick sessions and for anyone who enjoys reaction games with a splash of color.",
-  "howToPlay": "Press Play and watch the ball bounce over the scrolling bars. Tap or click a bar to color it; every tap cycles it through red, yellow and purple, and red always comes first. The bar under the ball must match the ball's color each time it lands, or the game is over.",
+  "howToPlay": "Press Play and watch the ball bounce over the scrolling bars. Tap or click a bar (anywhere in its column) to color it; every tap cycles it through red, yellow and purple, and red always comes first. The bar under the ball must match the ball's color each time it lands, or the game is over. Your best score is saved in your browser.",
   "controls": [
     {
-      "input": "Click / Tap bar",
+      "input": "Click / Tap a bar",
       "action": "Cycle the bar's color: red, yellow, purple"
+    },
+    {
+      "input": "P / Esc or the pause button",
+      "action": "Pause and resume the game"
+    },
+    {
+      "input": "Space / Enter",
+      "action": "Start or retry from the menus"
     },
     {
       "input": "Click / Tap buttons",
@@ -27,11 +35,15 @@
     },
     {
       "question": "Can I play on a phone or tablet?",
-      "answer": "Yes, you tap the bars to change their color. The game is designed for a wide screen, so on a phone it is much easier to play in landscape."
+      "answer": "Yes. Tap anywhere in a bar's column to change its color. The game adapts to the screen in both portrait and landscape, showing several bars ahead of the ball."
     },
     {
       "question": "Does Coloron get harder over time?",
       "answer": "Yes. As your score rises the bars scroll and the ball bounces faster, up to nearly twice the starting speed."
+    },
+    {
+      "question": "Is my best score saved?",
+      "answer": "Yes. Your best score is stored in your browser and shown during the game, in the menu and on the results screen."
     }
   ],
   "category": "Arcade",
@@ -44,5 +56,11 @@
   ],
   "author": "PewPlay",
   "playMode": "SinglePlayer",
-  "orientation": "landscape"
+  "orientation": "any",
+  "cover": "cover.png",
+  "screenshots": [
+    "screenshots/1.png",
+    "screenshots/2.png",
+    "screenshots/3.png"
+  ]
 }
