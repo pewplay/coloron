@@ -1,118 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coloron</title>
-
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700,900'>
-    <link rel="stylesheet" href="./style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="theme-color" content="#28DAD4">
+	<title>Coloron</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<canvas id="game" aria-label="Coloron game area"></canvas>
 
-    <div class="splash"></div>
-    <div class="container">
+	<div class="hud hidden" id="hud">
+		<button class="icon-btn" id="pauseBtn" type="button" aria-label="Pause">
+			<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+		</button>
+		<div class="hud-score">
+			<div class="score" id="score">0</div>
+			<div class="hud-best" id="hudBest"></div>
+		</div>
+	</div>
 
-        <div class="start-game game-full-flex" id="start-game">
+	<div class="learn-to-play" id="learn">Tap the bars to change their color!</div>
 
-            <div class="start-game-top"></div>
+	<div class="overlay start-game" id="startGame">
+		<div class="menu-box" id="menuBox">
+			<div class="logo-holder">
+				<p class="logo" aria-label="Coloron"><span>C</span><span>o</span><span>l</span><span>o</span><span>r</span><span>o</span><span>n</span></p>
+				<button class="play-button" id="playBtn" type="button">Play</button>
+				<p class="hint">Hint: <span>Red</span> is always the starting color</p>
+				<p class="menu-best" id="menuBest"></p>
+			</div>
 
-            <div class="logo-holder">
-                <p class="logo">
-                    <span>C</span>
-                    <span>o</span>
-                    <span>l</span>
-                    <span>o</span>
-                    <span>r</span>
-                    <span>o</span>
-                    <span>n</span>
-                </p>
-                <a class="play-button" href="#" onclick="game.start()">Play</a>
-                <h4 class="hint">Hint: <span>Red</span> is always the starting color</h4>
-            </div>
+			<div class="how-to-play">
+				<div class="section section-1">
+					<h4>The bouncing ball changes color</h4>
+					<div class="content">
+						<div class="ball-demo bouncing" id="demoBall"></div>
+					</div>
+				</div>
+				<div class="section section-2">
+					<h4>Tap a bar to change its color (red, yellow, purple)</h4>
+					<div class="content">
+						<div class="bar bar-1 red" data-index="0"></div>
+						<div class="bar bar-2 yellow" data-index="1"></div>
+						<div class="bar bar-3" data-index="-1"></div>
+					</div>
+				</div>
+				<div class="section section-3">
+					<h4>Always match the colors of the ball and the bar</h4>
+					<div class="content">
+						<div class="ball-demo purple"></div>
+						<div class="bar bar-4 purple"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-            <div class="how-to-play">
-                <div class="section section-1">
-                    <h4>The bouncing ball<br>changes color</h4>
-                    <div class="content">
-                        <div class="ball-demo" id="ball-demo"></div>
-                    </div>
-                </div>
-                <div class="section section-2">
-                    <h4>Tap a bar to change its color<br>(red, yellow, purple)</h4>
-                    <div class="content">
-                        <div class="bar bar-1" data-index="0"></div>
-                        <div class="bar bar-2"></div>
-                        <div class="bar bar-3"></div>
-                    </div>
-                </div>
-                <div class="section section-3">
-                    <h4>Always match the colors<br>of the ball and the bar</h4>
-                    <div class="content">
-                        <div class="ball-demo" id="ball-demo"></div>
-                        <div class="bar bar-1"></div>
-                    </div>
-                </div>
-            </div>
+	<div class="overlay stop-game hidden" id="stopGame">
+		<div class="score-container" id="scoreBox">
+			<h1>Coloron</h1>
+			<div class="final-score" id="finalScore">0!</div>
+			<div class="result" id="result"></div>
+			<div class="final-best" id="finalBest"></div>
+			<div class="buttons">
+				<button class="play-again" id="retryBtn" type="button">Retry</button>
+				<button class="main-menu" id="menuBtn" type="button">Menu</button>
+			</div>
+		</div>
+	</div>
 
-        </div>
+	<div class="overlay pause-screen hidden" id="pauseScreen">
+		<div class="pause-box">
+			<h2>Paused</h2>
+			<button class="play-again" id="resumeBtn" type="button">Resume</button>
+		</div>
+	</div>
 
-        <div class="stop-game game-full-flex">
-
-            <div class="score-container">
-
-                <h1>Coloron</h1>
-
-                <div class="final-score"></div>
-                <div class="result"></div>
-
-         
-                <div>
-                    <a class="play-again" href="#" onclick="game.start()">Retry</a>
-                    <a class="main-menu" href="#" onclick="game.intro()">Menu</a>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="small-glows"></div>
-
-        <div class="glow">
-            <div class="sun"></div>
-        </div>
-
-        <div class="waves">
-            <div class="top_wave"></div>
-            <div class="wave1"></div>
-            <div class="wave2"></div>
-            <div class="wave3"></div>
-            <div class="wave4"></div>
-        </div>
-
-        <div class="mounts">
-            <div class="mount1"></div>
-            <div class="mount2"></div>
-        </div>
-
-        <div class="clouds"></div>
-
-        <div class="scene">
-            <div class="learn-to-play">Tap the bars to change their color!</div>
-            <div class="score" id="score"></div>
-            <div class="ball-holder"></div>
-            <div class="sticks" id="sticks"></div>
-        </div>
-
-        <div class="noise"></div>
-
-    </div>
-    <!-- partial -->
-    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
-    <script src="./script.js"></script>
-
+	<script src="script.js"></script>
 </body>
-
 </html>
